@@ -4,19 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Magic Daily Art</title>
+<meta name="description" content="A new Magic: The Gathering illustration every day, right on your Android home screen.">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 48px 16px; line-height: 1.6; color: #F5F5F7; background: #0B0B0F; }
-  a { color: #A47FE6; }
-  small { color: #A3A3A3; }
+  :root {
+    --bg: #050609;
+    --text: #F5F5F7;
+    --muted: #A3A3A3;
+    --purple: #8049D3;
+    --purple-text: #A47FE6;
+    --outline: #6E6E78;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+  }
+  main { width: 100%; max-width: 640px; padding: 48px 16px 32px; flex: 1; }
+  .logo { width: min(320px, 80vw); height: auto; display: block; margin: 0 auto 24px; }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+  .lead { color: var(--muted); font-size: 18px; margin: 0 0 32px; }
+  /* Reserved for the Google Play link once the app is published. */
+  .download {
+    border: 1px dashed var(--outline);
+    border-radius: 16px;
+    padding: 20px 16px;
+    margin: 0 auto 40px;
+    max-width: 360px;
+  }
+  .download strong { display: block; font-weight: 500; }
+  .download span { color: var(--muted); font-size: 14px; }
+  .links { list-style: none; padding: 0; margin: 0 0 40px; }
+  .links li { margin: 8px 0; }
+  a { color: var(--purple-text); }
+  footer { width: 100%; max-width: 640px; padding: 24px 16px 40px; border-top: 1px solid #1F1F26; }
+  footer p { color: var(--muted); font-size: 13px; margin: 0 0 8px; }
 </style>
 </head>
 <body>
-<h1>Magic Daily Art</h1>
-<p>A new Magic: The Gathering illustration every day, right on your Android home screen. Free, with no ads and no account.</p>
-<ul>
-  <li><a href="privacy-policy.html">Privacy Policy</a></li>
-  <li>Support: <a href="mailto:magicdailyart@gmail.com">magicdailyart@gmail.com</a></li>
-</ul>
-<p><small>Magic Daily Art is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</small></p>
+<main>
+  <img class="logo" src="logo.png" alt="Magic Daily Art" width="720" height="720">
+  <h1>A new Magic illustration every day</h1>
+  <p class="lead">Discover the art of Magic: The Gathering and the artists behind it, right on your Android home screen. Free, with no ads and no account.</p>
+
+  <div class="download" id="download">
+    <strong>Coming soon to Google Play</strong>
+    <span>The download link will appear here.</span>
+  </div>
+
+  <ul class="links">
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li>Support: <a href="mailto:magicdailyart@gmail.com">magicdailyart@gmail.com</a></li>
+  </ul>
+</main>
+<footer>
+  <p>Magic Daily Art is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+  <p>Card data and images are provided by <a href="https://scryfall.com">Scryfall</a>. Magic Daily Art is not produced by or endorsed by Scryfall.</p>
+</footer>
 </body>
 </html>
