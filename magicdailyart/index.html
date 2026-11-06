@@ -42,16 +42,10 @@
     margin: 0 0 12px;
   }
   .lead { color: var(--muted); font-size: 18px; margin: 0 0 32px; }
-  /* Reserved for the Google Play link once the app is published. */
-  .download {
-    border: 1px dashed var(--outline);
-    border-radius: 16px;
-    padding: 20px 16px;
-    margin: 0 auto 40px;
-    max-width: 360px;
-  }
-  .download strong { display: block; font-weight: 500; }
-  .download span { color: var(--muted); font-size: 14px; }
+  /* The official Google Play badge (its image already includes the required clear space around it). */
+  .download { margin: 0 auto 40px; }
+  .download a { display: inline-block; }
+  .download img { display: block; width: 240px; max-width: 70vw; height: auto; }
   .links { list-style: none; padding: 0; margin: 0 0 40px; }
   .links li { margin: 8px 0; }
   a { color: var(--purple-text); }
@@ -66,8 +60,9 @@
   <p class="lead">Discover the art of Magic: The Gathering and the artists behind it, right on your Android home screen. Free, with no ads and no account.</p>
 
   <div class="download" id="download">
-    <strong>Coming soon to Google Play</strong>
-    <span>The download link will appear here.</span>
+    <a href="https://play.google.com/store/apps/details?id=com.magicdailyart">
+      <img src="google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
+    </a>
   </div>
 
   <ul class="links">
